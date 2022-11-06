@@ -7,7 +7,8 @@
 
 .nav.personal_profil.choosen,
 .nav.bookmarks.choosen,
-.nav.forma.choosen {
+.nav.forma.choosen,
+.nav.home.choosen {
   background: rgb(218, 195, 166);
 }
 .nav.home:hover,
