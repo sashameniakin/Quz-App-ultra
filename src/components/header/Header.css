@@ -8,4 +8,5 @@
   justify-content: center;
   color: black;
   font-family: fantasy;
+  z-index: 1;
 }

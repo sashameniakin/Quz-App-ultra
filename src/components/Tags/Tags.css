@@ -1,0 +1,8 @@
+.Tags__listElement {
+  display: inline;
+  border-radius: 16px;
+  padding: 15px;
+  border: 3px solid rgb(60, 60, 60);
+  background-color: antiquewhite;
+  box-shadow: 20px;
+}

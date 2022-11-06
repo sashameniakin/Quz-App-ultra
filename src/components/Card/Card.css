@@ -1,0 +1,47 @@
+.cards-container__flex {
+  border-radius: 14px;
+  background-color: rgb(179, 103, 103);
+  margin: 20px 200px 20px 200px;
+  /* width: auto; */
+  padding: 20px;
+  border-left: 14px solid white;
+  opacity: 0.8;
+  transition: 1s;
+  z-index: -1;
+  font-size: 1.2em;
+  position: relative;
+}
+
+.p__cards {
+  font-family: fantasy;
+}
+
+.showAnswer__button {
+  background-color: aliceblue;
+  padding: 20px;
+  box-shadow: 10px;
+  border-radius: 14px;
+  font-family: fantasy;
+  font-size: 1.2em;
+}
+
+.showAnswer__container {
+  background-color: antiquewhite;
+  margin: 10px;
+  height: 60px;
+  /* display: inline-block; */
+  border-radius: 12px;
+  padding: 20px 60px 20px 60px;
+}
+
+.Card__tags {
+  list-style: none;
+  display: flex;
+  gap: 8px;
+}
+
+.image__bookmark {
+  position: absolute;
+  right: 15px;
+  top: -20px;
+}
