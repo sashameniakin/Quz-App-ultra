@@ -1,14 +1,7 @@
 import "./NavElement.css";
 import { NAVS } from "../../../db";
 
-export default function NavElement({ page, setPage, onPage = () => {} }) {
-  function highlightPage(value) {
-    setPage(value);
-    console.log(value);
-  }
-
-  onPage(page);
-
+export default function NavElement({ page, highlightPage = () => {} }) {
   return (
     <footer className="container-grid__footer">
       <div

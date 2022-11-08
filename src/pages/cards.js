@@ -1,6 +1,6 @@
 import Card from "../components/Card/Card";
 
-export default function Cards({ cards }) {
+export default function Cards({ cards /* , toggleBookmark */ }) {
   return cards.map((cards) => {
     return (
       <Card
@@ -10,6 +10,9 @@ export default function Cards({ cards }) {
         answer={cards.answer}
         tags={cards.tags}
         isBookmarked={cards.isBookmarked}
+        /*   toggleBookmark={() => {
+          toggleBookmark(cards.id);
+        }} */
       />
     );
   });

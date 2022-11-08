@@ -3,7 +3,13 @@ import { useState } from "react";
 import Tags from "../Tags/Tags";
 import { cards } from "../../db";
 
-export default function Card({ id, question, answer, tags }) {
+export default function Card({
+  id,
+  question,
+  answer,
+  tags,
+  /* toggleBookmark = () => {}, */
+}) {
   const [showAnswer, setShowAnswer] = useState(true);
   const [isBookmark, setIsBookmarked] = useState();
 

@@ -1,14 +1,13 @@
 import NavElement from "./Navigation/NavElement";
 import "../Footer/Navigation.css";
-
 import "../Footer/Navigation/NavElement.css";
 
-function Navigation({ page, setPage, onPage = () => {} }) {
+function Navigation({ page, onPage = () => {} }) {
   function handleOnPage(page) {
     onPage(page);
   }
 
-  return <NavElement page={page} setPage={setPage} onPage={handleOnPage} />;
+  return <NavElement page={page} highlightPage={handleOnPage} />;
 }
 
 export default Navigation;

@@ -2,7 +2,7 @@ import { cards } from "../db";
 import Card from "../components/Card/Card";
 
 export default function Bookmark() {
-  console.log(cards);
+  /*   console.log(cards); */
 
   return cards.map((cards) => {
     return cards.isBookmarked ? (
