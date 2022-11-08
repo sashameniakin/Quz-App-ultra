@@ -1,35 +1,35 @@
 import "./Card.css";
 import { useState } from "react";
 import Tags from "../Tags/Tags";
-import { cards } from "../../db";
 
 export default function Card({
   id,
   question,
   answer,
   tags,
-  /* toggleBookmark = () => {}, */
+  isBookmarked,
+  toggleBookmark,
 }) {
   const [showAnswer, setShowAnswer] = useState(true);
-  const [isBookmark, setIsBookmarked] = useState();
+  /* const [isBookmark, setIsBookmarked] = useState(); */
 
   //default for toggled
 
   function toggleShowAnswer(value) {
     setShowAnswer(!value);
   }
-  function toggleBookmark(value) {
+  /* function toggleBookmark(value) {
     setIsBookmarked(!value);
     cards[id].isBookmarked = value;
-  }
+  } */
 
   return (
     <div className="cards-container__flex">
       <img
-        onClick={() => toggleBookmark(isBookmark)}
+        onClick={() => toggleBookmark(id)}
         className="image__bookmark"
         src={
-          cards[id].isBookmarked
+          isBookmarked
             ? "/images/bookmark-dark.png"
             : "/images/bookmark-light.png"
         }

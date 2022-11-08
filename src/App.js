@@ -1,7 +1,7 @@
 import "./App.css";
 import Header from "./components/header/Header";
 import Navigation from "./components/Footer/Navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Cards from "./pages/cards";
 import { cards } from "./db";
 import Profile from "./pages/profile";
@@ -9,6 +9,32 @@ import Form from "./pages/form";
 import Bookmark from "./pages/bookmarks";
 
 function App() {
+  const [newCards, setNewCards] = useState(() => {
+    const localData = JSON.parse(localStorage.getItem("bookmarked"));
+    console.log(localData);
+    return localData ?? cards;
+  });
+
+  useEffect(() => {
+    localStorage.setItem("bookmarked", JSON.stringify(newCards));
+  }, [newCards]);
+
+  const toggleBookmark = (ID) => {
+    setNewCards(
+      newCards.map((card) => {
+        if (ID === card.id) {
+          return {
+            ...card,
+            isBookmarked: !card.isBookmarked,
+          };
+        } else {
+          return card;
+        }
+      })
+    );
+  };
+  console.log(newCards);
+
   const [page, setPage] = useState("home");
 
   function handlePage(newPage) {
@@ -21,16 +47,11 @@ function App() {
       <main className="app__main">
         <div className="padding-top"></div>
         {page === "home" ? (
-          <Cards
-            cards={cards}
-            /*  toggleBookmark={() => {
-              handleToggleBookmarked();
-            }} */
-          />
+          <Cards newCards={newCards} onToggle={toggleBookmark} />
         ) : (
           ""
         )}
-        {page === "bookmarks" ? <Bookmark /> : ""}
+        {page === "bookmarks" ? <Bookmark newCards={newCards} /> : ""}
         {page === "profil" ? <Profile /> : ""}
         {page === "forma" ? <Form /> : ""}
         <div className="padding-bottom"></div>
