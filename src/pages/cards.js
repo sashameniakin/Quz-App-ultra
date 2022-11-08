@@ -5,9 +5,11 @@ export default function Cards({ cards }) {
     return (
       <Card
         key={cards.id}
+        id={cards.id}
         question={cards.question}
         answer={cards.answer}
         tags={cards.tags}
+        isBookmarked={cards.isBookmarked}
       />
     );
   });

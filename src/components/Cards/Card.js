@@ -1,7 +1,7 @@
-import "./Cards.css";
+/* import "./Card.css";
 import { useState } from "react";
 
-export default function Card() {
+function Card() {
   const [showAnswer, setShowAnswer] = useState(true);
 
   function toggleShowAnswer(value) {
@@ -23,3 +23,4 @@ export default function Card() {
     </div>
   );
 }
+ */

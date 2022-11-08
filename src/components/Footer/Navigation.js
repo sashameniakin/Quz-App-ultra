@@ -3,13 +3,12 @@ import "../Footer/Navigation.css";
 
 import "../Footer/Navigation/NavElement.css";
 
-function Navigation({ page, setPage }) {
-  /*   function highlightPage(page) {
-    setPage(page);
-  } */
-  /* setCurrentPage("home"); */
+function Navigation({ page, setPage, onPage = () => {} }) {
+  function handleOnPage(page) {
+    onPage(page);
+  }
 
-  return <NavElement page={page} setPage={setPage} />;
+  return <NavElement page={page} setPage={setPage} onPage={handleOnPage} />;
 }
 
 export default Navigation;
