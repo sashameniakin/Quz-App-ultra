@@ -7,6 +7,7 @@ import { cards } from "./db";
 import Profile from "./pages/profile";
 import Form from "./pages/form";
 import Bookmark from "./pages/bookmarks";
+import { AppContextProvider } from "./context/app-context";
 
 function App() {
   const [newCards, setNewCards] = useState(() => {
@@ -42,27 +43,29 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <Header />
-      <main className="app__main">
-        <div className="padding-top"></div>
-        {page === "home" ? (
-          <Cards newCards={newCards} onToggle={toggleBookmark} />
-        ) : (
-          ""
-        )}
-        {page === "bookmarks" ? <Bookmark newCards={newCards} /> : ""}
-        {page === "profil" ? <Profile /> : ""}
-        {page === "forma" ? <Form /> : ""}
-        <div className="padding-bottom"></div>
-      </main>
-      <Navigation
-        page={page}
-        onPage={(newPage) => {
-          handlePage(newPage);
-        }}
-      />
-    </div>
+    <AppContextProvider>
+      <div className="App">
+        <Header />
+        <main className="app__main">
+          <div className="padding-top"></div>
+          {page === "home" ? (
+            <Cards newCards={newCards} onToggle={toggleBookmark} />
+          ) : (
+            ""
+          )}
+          {page === "bookmarks" ? <Bookmark newCards={newCards} /> : ""}
+          {page === "profil" ? <Profile /> : ""}
+          {page === "forma" ? <Form /> : ""}
+          <div className="padding-bottom"></div>
+        </main>
+        <Navigation
+          page={page}
+          onPage={(newPage) => {
+            handlePage(newPage);
+          }}
+        />
+      </div>
+    </AppContextProvider>
   );
 }
 

@@ -60,4 +60,11 @@ export const cards = [
     tags: ["cartoons", "people"],
     isBookmarked: false,
   },
+  {
+    id: 4,
+    question: "How many minutes are in a full week?",
+    answer: "10080",
+    tags: ["week", "how many"],
+    isBookmarked: false,
+  },
 ];

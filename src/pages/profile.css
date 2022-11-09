@@ -1,0 +1,28 @@
+.container-flex__fotoname,
+.container-flex__counterbookmarks,
+.container,
+.container-flex__darkmode {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.user-foto {
+  background-color: bisque;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+}
+.container-about,
+.tag {
+  padding-left: 70px;
+  padding-right: 70px;
+  font-family: fantasy;
+}
+.container.for_counters {
+  background-color: bisque;
+  width: 70px;
+  height: 40px;
+  border-radius: 7px;
+  color: black;
+}
