@@ -1,7 +1,6 @@
 .container-flex__fotoname,
 .container-flex__counterbookmarks,
-.container,
-.container-flex__darkmode {
+.container {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -12,6 +11,9 @@
   width: 200px;
   height: 200px;
   border-radius: 100%;
+}
+.user-name {
+  font-size: 1.5em;
 }
 .container-about,
 .tag {
