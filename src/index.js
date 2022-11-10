@@ -10,9 +10,8 @@ root.render(
   <ThemeContextWrapper>
     <React.StrictMode>
       <App />
-    </React.StrictMode>{" "}
-  </ThemeContextWrapper>,
-  document.getElementById("root")
+    </React.StrictMode>
+  </ThemeContextWrapper>
 );
 
 // If you want to start measuring performance in your app, pass a function
