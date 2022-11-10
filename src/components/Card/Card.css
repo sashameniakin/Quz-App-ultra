@@ -23,6 +23,10 @@
   font-size: 1.2em;
 }
 
+.showAnswer__button:hover {
+  background-color: rgb(189, 203, 203);
+}
+
 .showAnswer__container {
   background-color: antiquewhite;
   margin: 10px;
