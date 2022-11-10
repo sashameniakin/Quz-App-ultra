@@ -1,10 +1,7 @@
-import { cards } from "../db";
 import Card from "../components/Card/Card";
 
-export default function Bookmark() {
-  /*   console.log(cards); */
-
-  return cards.map((cards) => {
+export default function Bookmark({ newCards }) {
+  return newCards.map((cards) => {
     return cards.isBookmarked ? (
       <Card
         key={cards.id}
